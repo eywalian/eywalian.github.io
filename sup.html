@@ -9,22 +9,22 @@
      <script>
 	 window.onload = choosePic;
 
-var theAd = 0;
-var adImages = new Array("/luke.png","/ted.png","/polpot.png","/walian.png/","/smiledog.png","/bruce.png");
+var i = 0;
+var images = new Array("/luke.png","/ted.png","/polpot.png","/walian.png/","/smiledog.png","/bruce.png");
 
 function choosePic() {
-     theAd = Math.floor(Math.random() * adImages.length);
-     document.getElementById("adBanner").src = adImages[theAd];
+     i = Math.floor(Math.random() * images.length);
+     document.getElementById("banner").src = images[i];
 
      rotate();
 }
 
 function rotate() {
-     theAd++;
-     if (theAd == adImages.length) {
-        theAd = 0;
+     i++;
+     if (i == images.length) {
+        i = 0;
      }
-     document.getElementById("adBanner").src = adImages[theAd];
+     document.getElementById("banner").src = images[i];
 
      setTimeout(rotate, 3 * 1000);
 }
@@ -51,7 +51,7 @@ img {
 </head>
 <body>
      <div class="centered">
-        <img src="/spacer.gif" id="adBanner" alt="sup">
+        <img src="/spacer.gif" id="banner" alt="sup">
      </div>
 </body>
 </html>
