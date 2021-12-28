@@ -3,13 +3,13 @@
 
 <head>
     <title>sup</title>
-	<meta name="robots" content="noindex">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<a href="https://fiftyfiftyclown.com/">
-	<h1 style="text-align:center; color:white;"> HAVE YOU <br> SEEN <br> THIS MAN? </h1>
-	</a>
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <a href="https://fiftyfiftyclown.com/">
+    <h1 id="headEr" style="text-align:center; color:white;"> HAVE YOU <br> SEEN <br> THIS MAN? </h1>
+    </a>
     <script>
-	 window.onload = choosePic;
+     window.onload = choosePic;
 
 var i = 0;
 var images = new Array("/thisman/luke.png","/thisman/ted.png","/thisman/polpot.png","/thisman/walian.png","/thisman/smiledog.png","/thisman/bruce.png","/thisman/hal.png");
@@ -30,8 +30,8 @@ function rotate() {
 
      setTimeout(rotate, 3 * 1000);
 }
-	 </script>
-	 <style>
+     </script>
+     <style>
 body{
   background-image: url("/pain.png");
   background-repeat: repeat-xy;
@@ -54,7 +54,18 @@ a{ text-decoration: none;}
 </head>
 <body>
      <div class="centered">
-        <img src="/spacer.gif" id="banner" alt="sup" width="600" height="600">
+        <img src="/spacer.gif" id="banner" alt="sup" "width:100%">
      </div>
 </body>
+
+  <script>
+document.getElementById("banner").addEventListener(
+  "click",
+  function() {
+document.getElementById("headEr").innerHTML = "<br> NOW YOU <br> HAVE :-)<br>";
+}
+);
+
+
+     </script>
 </html>
